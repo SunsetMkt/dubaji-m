@@ -1,218 +1,48 @@
 # dubaji-m
+
 毒霸姬 Android 逆向
 
-## 下载链接
-https://www.bilibili.com/video/BV1e8411S7Aw/
+## 有价值的其他项目
 
-https://dubaji-m.zhhainiao.com/
+https://github.com/66hh/DubaCrack
 
-## APK内容tree
-```
-.
-├── AndroidManifest.xml
-├── assets
-│   ├── animation
-│   │   ├── eva_animation.png
-│   │   ├── tab_icon_assistant_anim.png
-│   │   ├── tab_icon_creator_anim.png
-│   │   ├── tab_icon_dubaji_anim.png
-│   │   └── tab_icon_mine_anim.png
-│   ├── audio
-│   │   ├── error.wav
-│   │   └── welcome.wav
-│   ├── close.png
-│   ├── cn
-│   ├── cucc
-│   │   └── host_cucc.properties
-│   ├── dexopt
-│   │   ├── baseline.prof
-│   │   └── baseline.profm
-│   ├── dubaji_amp.zip
-│   ├── dubaji_back.png
-│   ├── icon_gear.png
-│   ├── ijiami_VMP_pay.VData
-│   ├── oaid.pem
-│   ├── supplierconfig.json
-│   └── version.ini
-├── classes.dex
-├── classes2.dex
-├── DebugProbesKt.bin
-├── javax
-│   └── annotation
-│       ├── CheckForNull.java
-│       ├── CheckForSigned.java
-│       ├── CheckReturnValue.java
-│       ├── concurrent
-│       │   ├── GuardedBy.java
-│       │   ├── Immutable.java
-│       │   ├── NotThreadSafe.java
-│       │   └── ThreadSafe.java
-│       ├── Detainted.java
-│       ├── MatchesPattern.java
-│       ├── meta
-│       │   ├── Exclusive.java
-│       │   ├── Exhaustive.java
-│       │   ├── TypeQualifier.java
-│       │   ├── TypeQualifierDefault.java
-│       │   ├── TypeQualifierNickname.java
-│       │   ├── TypeQualifierValidator.java
-│       │   └── When.java
-│       ├── Nonnegative.java
-│       ├── Nonnull.java
-│       ├── Nullable.java
-│       ├── OverridingMethodsMustInvokeSuper.java
-│       ├── ParametersAreNonnullByDefault.java
-│       ├── PropertyKey.java
-│       ├── RegEx.java
-│       ├── Signed.java
-│       ├── Syntax.java
-│       ├── Tainted.java
-│       ├── Untainted.java
-│       ├── WillClose.java
-│       ├── WillCloseWhenClosed.java
-│       └── WillNotClose.java
-├── kotlin
-│   ├── annotation
-│   │   └── annotation.kotlin_builtins
-│   ├── collections
-│   │   └── collections.kotlin_builtins
-│   ├── coroutines
-│   │   └── coroutines.kotlin_builtins
-│   ├── internal
-│   │   └── internal.kotlin_builtins
-│   ├── kotlin.kotlin_builtins
-│   ├── ranges
-│   │   └── ranges.kotlin_builtins
-│   └── reflect
-│       └── reflect.kotlin_builtins
-├── kotlin-tooling-metadata.json
-├── lib
-│   ├── arm64-v8a
-│   │   ├── libampunpacker.so
-│   │   ├── libCtaApiLib.so
-│   │   ├── libijiami_VMP_pay.so
-│   │   ├── libLive2DCubismCoreJNI.so
-│   │   ├── liblog.so
-│   │   ├── libmmkv.so
-│   │   ├── libmsaoaidauth.so
-│   │   ├── libmsaoaidsec.so
-│   │   └── libsqlcipher.so
-│   ├── armeabi
-│   │   ├── libCtaApiLib.so
-│   │   └── libijiami_VMP_pay.so
-│   └── armeabi-v7a
-│       ├── libampunpacker.so
-│       ├── libCtaApiLib.so
-│       ├── libijiami_VMP_pay.so
-│       ├── libLive2DCubismCoreJNI.so
-│       ├── liblog.so
-│       ├── libmmkv.so
-│       ├── libmsaoaidauth.so
-│       ├── libmsaoaidsec.so
-│       └── libsqlcipher.so
-├── META-INF
-│   └── ...
-├── okhttp3
-│   └── ...
-├── res
-│   └── ...
-└── resources.arsc
-```
+## APK 下载链接
 
-## `dubaji_amp.zip`
-`dubaji_amp.zip`是主要的需要被研究的文件。
+https://www.dubaji.com/
 
-## jadx-gui
+## 分析
+
+## Java 部分（jadx-gui）
+
 值得注意的几个片段：
 
 ```java
-package w2;
-
-import android.util.Log;
-import com.cf.ampunpacker.AmpPackWrapper;
-import com.live2d.sdk.cubism.framework.CubismModelSettingJson;
-import com.live2d.wrapper.live2Dhelper.LAppDefine;
-import java.io.IOException;
-import java.util.Map;
-
-/* compiled from: LAppLive2DResource.java */
-/* loaded from: classes.dex */
-public final class a implements Runnable {
-
-    /* renamed from: a  reason: collision with root package name */
-    public final /* synthetic */ u2.a f5089a;
-
-    /* renamed from: b  reason: collision with root package name */
-    public final /* synthetic */ b f5090b;
-
-    public a(b bVar, u2.a aVar) {
-        this.f5090b = bVar;
-        this.f5089a = aVar;
-    }
-
-    @Override // java.lang.Runnable
     public final void run() {
-        LAppDefine.ModelDir modelDir;
-        b bVar = this.f5090b;
-        bVar.getClass();
+        CubismModelSettingJson cubismModelSettingJson;
+        b bVar = this.f5993c;
+        bVar.f6000f = true;
+        int i5 = this.f5991a;
         Log.d("live2d", "loadResource-start");
-        String str = LAppDefine.ResourcePath.ROOT.getPath() + LAppDefine.ModelDir.values()[0].getDirName() + "/";
-        bVar.e = str;
-        try {
-            Map<String, byte[]> loadEncryptedAmpFileData = AmpPackWrapper.getInstance().loadEncryptedAmpFileData(bVar.f5093c, "dubaji_amp.zip");
-            if (loadEncryptedAmpFileData != null) {
-                for (Map.Entry<String, byte[]> entry : loadEncryptedAmpFileData.entrySet()) {
-                    bVar.f5091a.put(str + entry.getKey(), entry.getValue());
-                }
-            }
-        } catch (IOException e) {
-            Log.e("preloadEncryptedAmpFileData", e.getMessage());
-        }
-        byte[] a5 = bVar.a(bVar.e + (modelDir.getDirName() + ".model3.json"));
-        if (a5 != null) {
-            CubismModelSettingJson cubismModelSettingJson = new CubismModelSettingJson(a5);
-            String modelFileName = cubismModelSettingJson.getModelFileName();
-            if (!modelFileName.equals("")) {
-                bVar.a(bVar.e + modelFileName);
-            }
-            if (cubismModelSettingJson.getExpressionCount() > 0) {
-                int expressionCount = cubismModelSettingJson.getExpressionCount();
-                for (int i4 = 0; i4 < expressionCount; i4++) {
-                    bVar.a(bVar.e + cubismModelSettingJson.getExpressionFileName(i4));
-                }
-            }
-            String physicsFileName = cubismModelSettingJson.getPhysicsFileName();
-            if (!physicsFileName.equals("")) {
-                bVar.a(bVar.e + physicsFileName);
-            }
-            String poseFileName = cubismModelSettingJson.getPoseFileName();
-            if (!poseFileName.equals("")) {
-                bVar.a(bVar.e + poseFileName);
-            }
-            String userDataFile = cubismModelSettingJson.getUserDataFile();
-            if (!userDataFile.equals("")) {
-                bVar.a(bVar.e + userDataFile);
-            }
-            bVar.f5094d = new c();
-            for (int i5 = 0; i5 < cubismModelSettingJson.getMotionGroupCount(); i5++) {
-                String motionGroupName = cubismModelSettingJson.getMotionGroupName(i5);
-                int motionCount = cubismModelSettingJson.getMotionCount(motionGroupName);
-                for (int i6 = 0; i6 < motionCount; i6++) {
-                    String motionFileName = cubismModelSettingJson.getMotionFileName(motionGroupName, i6);
-                    if (!motionFileName.equals("")) {
-                        String d2 = androidx.appcompat.widget.a.d(new StringBuilder(), bVar.e, motionFileName);
-                        bVar.f5092b.put(d2, bVar.f5094d.loadMotion(bVar.a(d2), null));
+        if (i5 < LAppDefine.ModelDir.values().length) {
+            if (bVar.f5999e.contains(Integer.valueOf(i5))) {
+                Log.d("live2d", "has preloaded");
+            } else {
+                LAppDefine.ModelDir modelDir = LAppDefine.ModelDir.values()[i5];
+                String str = LAppDefine.ResourcePath.ROOT.getPath() + modelDir.getDirName() + "/";
+                boolean isUseAmp = modelDir.isUseAmp();
+                if (isUseAmp) {
+                    try {
+                        Map<String, byte[]> loadEncryptedAmpFileData = AmpPackWrapper.getInstance().loadEncryptedAmpFileData(bVar.f5997c, modelDir.getAmpResName());
+                        if (loadEncryptedAmpFileData != null) {
+                            for (Map.Entry<String, byte[]> entry : loadEncryptedAmpFileData.entrySet()) {
+                                bVar.f5995a.put(str + entry.getKey(), entry.getValue());
+                            }
+                        }
+                    } catch (IOException e5) {
+                        Log.e("preloadEncryptedAmpFileData", e5.getMessage());
                     }
                 }
-            }
-            Log.d("live2d", "loadResource-end");
-        }
-        u2.a aVar = this.f5089a;
-        if (aVar != null) {
-            aVar.onLive2dPreloadSuccess();
-        }
-    }
-}
+                byte[] a5 = bVar.a(str + (modelDir.getFilePrefix() + ".model3.json"), isUseAmp);
 ```
 
 ```java
