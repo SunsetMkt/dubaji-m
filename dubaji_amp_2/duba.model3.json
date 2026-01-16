@@ -1,0 +1,246 @@
+{
+	"Version": 3,
+	"FileReferences": {
+		"Moc": "duba.moc3",
+		"Textures": [
+			"duba.2048/texture_00.png",
+			"duba.2048/texture_01.png",
+			"duba.2048/texture_02.png",
+			"duba.2048/texture_03.png",
+			"duba.2048/texture_04.png"
+		],
+		"Physics": "duba.physics3.json",
+		"DisplayInfo": "duba.cdi3.json",
+		"Motions": {				
+			"Idle": [
+				{
+					"File": "motions/stb_normal.motion3.json",
+					"FadeInTime": 0,
+					"FadeOutTime": 0
+				}
+			],
+			"stb_normal": [
+				{
+					"File": "motions/stb_normal.motion3.json",
+					"FadeInTime": 0,
+					"FadeOutTime": 0
+				}
+			],	
+			"expression_speak": [
+				{
+					"File": "motions/fun_speak.motion3.json",
+					"FadeInTime": 0,
+					"FadeOutTime": 0
+				}
+			],
+			"expression_listen": [
+				{
+					"File": "motions/fun_listen_idle.motion3.json",
+					"FadeInTime": 0,
+					"FadeOutTime": 0
+				}
+			],	
+			"expression_think": [
+				{
+					"File": "motions/fun_think_idle.motion3.json",
+					"FadeInTime": 0,
+					"FadeOutTime": 0
+				}
+			],
+			"emotion_happy": [
+				{
+					"File": "motions/speak_happy_idle.motion3.json",
+					"FadeInTime": 0,
+					"FadeOutTime": 0
+				}
+			],
+			"emotion_angry": [
+				{
+					"File": "motions/speak_angry_idle.motion3.json",
+					"FadeInTime": 0,
+					"FadeOutTime": 0
+				}
+			],
+			"emotion_sad": [
+				{
+					"File": "motions/speak_sad_idle.motion3.json",
+					"FadeInTime": 0,
+					"FadeOutTime": 0
+				}
+			],
+			"emotion_doubt": [
+				{
+					"File": "motions/speak_doubt_idle.motion3.json",
+					"FadeInTime": 0,
+					"FadeOutTime": 0
+				}
+			],
+			"emotion_shy": [
+				{
+					"File": "motions/speak_shy_idle.motion3.json",
+					"FadeInTime": 0,
+					"FadeOutTime": 0
+				}
+			],
+			"welcome": [
+				{
+					"File": "motions/fun_speak.motion3.json",
+					"FadeInTime": 0,
+					"FadeOutTime": 0
+				}
+			],
+			"HitArea_hair_click_group": [
+				{
+					"File": "motions/daimao.motion3.json",
+					"Sound": "sounds/daimao.mp3",
+					"FadeInTime": 0,
+					"FadeOutTime": 0
+				}
+			],
+			"HitArea_head_click_group": [
+				{
+					"File": "motions/stupid.motion3.json",
+					"Sound": "sounds/stupid.mp3",
+					"FadeInTime": 0,
+					"FadeOutTime": 0
+				},
+				{
+					"File": "motions/touch_faceL.motion3.json",
+					"Sound": "sounds/touch_faceL.mp3",
+					"FadeInTime": 0,
+					"FadeOutTime": 0
+				},
+				{
+					"File": "motions/touch_faceR.motion3.json",
+					"Sound": "sounds/touch_faceR.mp3",
+					"FadeInTime": 0,
+					"FadeOutTime": 0
+				},
+                {
+                    "File": "motions/earphones.motion3.json",
+                    "Sound": "sounds/earphones.mp3",
+                    "FadeInTime": 0,
+                    "FadeOutTime": 0
+                }
+			],
+			"HitArea_body_click_group": [
+				{
+					"File": "motions/despise.motion3.json",
+					"Sound": "sounds/despise.mp3",
+					"FadeInTime": 0,
+					"FadeOutTime": 0
+				},
+				{
+					"File": "motions/touchWhere.motion3.json",
+					"Sound": "sounds/touchWhere.mp3",
+					"FadeInTime": 0,
+					"FadeOutTime": 0
+				},
+				{
+					"File": "motions/doubtAsk.motion3.json",
+					"Sound": "sounds/doubtAsk.mp3",
+					"FadeInTime": 0,
+					"FadeOutTime": 0
+				},
+				{
+					"File": "motions/likeYou.motion3.json",
+					"Sound": "sounds/likeYou.mp3",
+					"FadeInTime": 0,
+					"FadeOutTime": 0
+				},
+				{
+					"File": "motions/shyLike.motion3.json",
+					"Sound": "sounds/shyLike.mp3",
+					"FadeInTime": 0,
+					"FadeOutTime": 0
+				},
+                {
+                    "File":"motions/eat.motion3.json",
+                    "Sound":"sounds/fun_eat.mp3",
+                    "FadeInTime":0,
+                    "FadeOutTime":0
+                },
+                {
+                    "File":"motions/gunkill.motion3.json",
+                    "Sound":"sounds/gunkill.mp3",
+                    "FadeInTime":0,
+                    "FadeOutTime":0
+                },
+                {
+                    "File":"motions/outwear.motion3.json",
+                    "Sound":"sounds/outwear.mp3",
+                    "FadeInTime":0,
+                    "FadeOutTime":0
+                },
+                {
+                    "File":"motions/sing.motion3.json",
+                    "Sound":"sounds/sing.mp3",
+                    "FadeInTime":0,
+                    "FadeOutTime":0
+                }
+			],
+			"HitArea_leg_click_group": [
+				{
+					"File": "motions/touchWhere.motion3.json",
+					"Sound": "sounds/touchWhere.mp3",
+					"FadeInTime": 0,
+					"FadeOutTime": 0
+				},
+                {
+                    "File":"motions/eat.motion3.json",
+                    "Sound":"sounds/fun_eat.mp3",
+                    "FadeInTime":0,
+                    "FadeOutTime":0
+                },
+                {
+                    "File":"motions/gunkill.motion3.json",
+                    "Sound":"sounds/gunkill.mp3",
+                    "FadeInTime":0,
+                    "FadeOutTime":0
+                },
+                {
+                    "File":"motions/outwear.motion3.json",
+                    "Sound":"sounds/outwear.mp3",
+                    "FadeInTime":0,
+                    "FadeOutTime":0
+                },
+                {
+                    "File":"motions/sing.motion3.json",
+                    "Sound":"sounds/sing.mp3",
+                    "FadeInTime":0,
+                    "FadeOutTime":0
+                }
+			]					
+		}
+	},
+	"Groups": [
+		{
+			"Target": "Parameter",
+			"Name": "LipSync",
+			"Ids": []
+		},
+		{
+			"Target": "Parameter",
+			"Name": "EyeBlink",
+			"Ids": []
+		}
+	],
+	"HitAreas": [
+		{
+			"Id": "HitArea_hair",
+			"Name": "HitArea_hair_click_group"
+		},
+		{
+			"Id": "HitArea_head",
+			"Name": "HitArea_head_click_group"
+		},
+		{
+			"Id": "HitArea_body",
+			"Name": "HitArea_body_click_group"
+		},
+		{
+			"Id": "HitArea_leg",
+			"Name": "HitArea_leg_click_group"
+		}
+	]
+}
